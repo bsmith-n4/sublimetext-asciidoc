@@ -17,6 +17,29 @@ This package provides more complete and up-to-date syntax highlighting, snippets
 * At the end of a callouts list item, pressing <kbd>Enter</kbd> will automatically insert the new list item with incremented number.
     - Pressing <kbd>Enter</kbd> on the blank list item will remove it.
 
+== Snippets
+
+|===
+| Name               | Trigger       
+
+| Button             | btn⇥         
+| Comment Block      | //⇥          
+| Document Title     | h0⇥          
+| Example Block      |               
+| Footnote Reference | fnr⇥         
+| Footnote           | fn⇥          
+| Image              | img⇥         
+| Keyboard Shortcut  | kbd⇥         
+| Listing Block      | --⇥          
+| Passthrough Block  |               
+| Quote Block        | __⇥
+| Requirement Block  | req⇥        
+| Section Title 1–5  | h1⇥, …, h5⇥ 
+| Sidebar block      |               
+| Table              | |=⇥          
+|===
+
+
 == Others
 
 * Displays document and section titles in the local symbol list (<kbd>Ctrl</kbd> <kbd>R</kbd> / <kbd>Cmd</kbd> <kbd>R</kbd>) and the global symbol list (<kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>R</kbd> / <kbd>Cmd</kbd> <kbd>Shift</kbd> <kbd>R</kbd>).
