@@ -1,7 +1,7 @@
 = AsciiSpec Package for SublimeText 3
 :experimental: true 
 
-image:https://travis-ci.org/bsmith-n4/asciispec-sublime.svg?branch=master["Build Status", link="https://travis-ci.org/bsmith-n4/asciispec-sublime"]
+image:https://travis-ci.org/bsmith-n4/asciispec-sublimetext.svg?branch=master["Build Status", link="https://travis-ci.org/bsmith-n4/asciispec-sublimetext"]
 
 This package provides more complete and up-to-date syntax highlighting, snippets and other goodies for AsciiDoc editing in http://www.sublimetext.com/3[SublimeText 3].
 
