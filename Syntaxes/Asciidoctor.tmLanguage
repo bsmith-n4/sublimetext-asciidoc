@@ -1903,7 +1903,7 @@ Examples:
   Lorem ipsum dolor.
 </string>
 			<key>match</key>
-			<string>(\[req,id=)(.+?)(version=)([0-9])(\])</string>
+			<string>(\[req,id=)(.+?)(,version=)([0-9])(\])</string>
 			<key>name</key>
 			<string>meta.tag.reqid.asciidoc</string>
 		</dict>

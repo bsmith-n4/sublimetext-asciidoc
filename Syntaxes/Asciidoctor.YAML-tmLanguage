@@ -877,7 +877,7 @@ repository:
         [req,id=ROPR1234,version=1]
         Lorem ipsum dolor.
     name: meta.tag.reqid.asciidoc
-    match: (\[req,id=)(.+?)(version=)([0-9])(\])
+    match: (\[req,id=)(.+?)(,version=)([0-9])(\])
     captures:
       '2': {name: markup.underline.reqid.id.asciidoc}
       '4': {name: markup.underline.reqversion.asciidoc}
