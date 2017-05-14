@@ -24,6 +24,9 @@ XREF_SCOPE = 'meta.xref.asciidoc'
 # Scope of the anchor ID.
 ANCHOR_SCOPE = 'markup.underline.blockid.id.asciidoc'
 
+# Scope of the Requirement ID.
+REQ_ID_SCOPE = 'markup.underline.reqid.id.asciidoc'
+
 # Scope of the section titles.
 SEC_TITLE_SCOPE = 'entity.name.section.asciidoc'
 
@@ -88,8 +91,9 @@ class AsciidocCrossReferenceCompletions(EventListener):
 
         anchors = zip(find_by_scope(view, ANCHOR_SCOPE), repeat('anchor'))
         titles = zip(find_by_scope(view, SEC_TITLE_SCOPE), repeat('title'))
+        reqs = zip(find_by_scope(view, REQ_ID_SCOPE), repeat('reqs'))
 
-        return sorted(filter_completions(prefix, anchors, titles),
+        return sorted(filter_completions(prefix, anchors, titles, reqs),
                       key=lambda t: t[0].lower())
 
     def should_trigger(self, view, point):

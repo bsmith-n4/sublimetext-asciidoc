@@ -31,6 +31,7 @@ repository:
     - include: '#block_quote'
     - include: '#block_example'
     - include: '#block_open'
+
     #- include: '#block_paragraph'
 
   block_comment:
@@ -786,6 +787,7 @@ repository:
     - include: '#block_thematic_break'
     - include: '#block_title'
     - include: '#block_id'
+    - include: '#req_id'   
     - include: '#section_template'
     - include: '#attribute_list_line'
     - include: '#attribute_entry'
@@ -866,6 +868,19 @@ repository:
       '1': {name: punctuation.definition.blockid.begin.asciidoc}
       '2': {name: markup.underline.blockid.id.asciidoc}
       '3': {name: punctuation.definition.blockid.end.asciidoc}
+  
+  req_id:
+    comment: |
+      A requirement id (i.e. anchor).
+
+      Examples:
+        [req,id=ROPR1234,version=1]
+        Lorem ipsum dolor.
+    name: meta.tag.reqid.asciidoc
+    match: (\[req,id=)(.+?)(version=)([0-9])(\])
+    captures:
+      '2': {name: markup.underline.reqid.id.asciidoc}
+      '4': {name: markup.underline.reqversion.asciidoc}
 
   inline_break:
     comment: |
