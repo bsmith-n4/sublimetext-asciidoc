@@ -3,7 +3,6 @@
 
   // List of built-in attributes to display in completions.
   "built_in_attributes": [
-    
     // Data attributes
     "asciidoctor-version", "backend", "docdate", "docdatetime",
     "docdir", "docfile", "doctime", "doctitle", "doctype", "localdate",
