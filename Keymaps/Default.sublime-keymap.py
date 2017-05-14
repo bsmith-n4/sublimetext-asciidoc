@@ -5,7 +5,7 @@ from sublimedsl.keymap import *
 
 
 def asciidoc_macro(name):
-    return "res://Packages/Asciidoctor/Macros/%s.sublime-macro" % name
+    return "res://Packages/asciispec-sublimetext/Macros/%s.sublime-macro" % name
 
 
 def builtin_macro(name):

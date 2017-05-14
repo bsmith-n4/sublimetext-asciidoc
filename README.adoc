@@ -1,6 +1,6 @@
 = AsciiDoc Package for SublimeText 3
 
-image:https://travis-ci.org/bsmith-n4/enfore-sublimetext.svg?branch=master["Build Status", link="https://travis-ci.org/bsmith-n4/enfore-sublimetext"]
+image:https://travis-ci.org/bsmith-n4/enfore-sublimetext.svg?branch=master["Build Status", link="https://travis-ci.org/bsmith-n4/asciispec-sublimetext"]
 
 This package provides more complete and up-to-date syntax highlighting, snippets and other goodies for AsciiDoc editing in http://www.sublimetext.com/3[SublimeText 3].
 
@@ -16,6 +16,29 @@ This package provides more complete and up-to-date syntax highlighting, snippets
     - You can disable indentation of list items in your settings file.
 * At the end of a callouts list item, pressing <kbd>Enter</kbd> will automatically insert the new list item with incremented number.
     - Pressing <kbd>Enter</kbd> on the blank list item will remove it.
+
+== Snippets
+
+|===
+| Name               | Trigger       
+
+| Button             | btn⇥         
+| Comment Block      | //⇥          
+| Document Title     | h0⇥          
+| Example Block      |               
+| Footnote Reference | fnr⇥         
+| Footnote           | fn⇥          
+| Image              | img⇥         
+| Keyboard Shortcut  | kbd⇥         
+| Listing Block      | --⇥          
+| Passthrough Block  |               
+| Quote Block        | __⇥
+| Requirement Block  | req⇥        
+| Section Title 1–5  | h1⇥, …, h5⇥ 
+| Sidebar block      |               
+| Table              | |=⇥          
+|===
+
 
 == Others
 
@@ -34,14 +57,14 @@ Install this plugin manually from GitHub:
     * OS X: `pass:[~]/Library/Application\ Support/Sublime\ Text\ 3/Packages/`
     * Linux: `pass:[~]/.config/sublime-text-3/Packages/`
     * Windows: `pass:[%APPDATA%\Sublime Text 3\Packages\]`
-2. Clone this repository here into subdirectory Asciidoctor:
- git clone https://github.com/asciidoctor/sublimetext-asciidoc.git Asciidoctor
+2. Clone this repository here into subdirectory asciispec-sublimetext:
+ git clone https://github.com/bsmith-n4/asciispec-sublimetext.git 
 3. Restart SublimeText.
 
 
 == Acknowledgement
 
-The syntax definition is based on [AsciiDoc-TextMate-2.tmbundle](https://github.com/mattneub/AsciiDoc-TextMate-2.tmbundle) by [Matt Neuburg](https://github.com/mattneub).
+The syntax definition is based on AsciiDoc-TextMate-2.tmbundle (https://github.com/mattneub/AsciiDoc-TextMate-2.tmbundle) by Matt Neuburg (https://github.com/mattneub).
 
 Most of the commands, keymaps and some text in this readme are based on (or inspired by) [MarkdownEditing](https://github.com/SublimeText-Markdown/MarkdownEditing) package.
 
@@ -55,6 +78,5 @@ Most of the commands, keymaps and some text in this readme are based on (or insp
 
 == License
 
-
-This project is licensed under [MIT License](http://opensource.org/licenses/MIT/).
-For the full text of the license, see the [LICENSE](LICENSE) file.
+This project is licensed under MIT License http://opensource.org/licenses/MIT.
+For the full text of the license, see the LICENSE file.

@@ -6,15 +6,15 @@
         "caption": "Package Settings",
         "children": [
           {
-            "caption": "Asciidoctor",
+            "caption": "asciispec-sublimetext",
             "children": [
               {
-                "args": { "file": "${packages}/Asciidoctor/Asciidoctor.sublime-settings" },
+                "args": { "file": "${packages}/asciispec-sublimetext/asciispec-sublimetext.sublime-settings" },
                 "caption": "Settings \u2013 Default",
                 "command": "open_file"
               },
               {
-                "args": { "file": "${packages}/User/Asciidoctor.sublime-settings" },
+                "args": { "file": "${packages}/User/asciispec-sublimetext.sublime-settings" },
                 "caption": "Settings \u2013 User",
                 "command": "open_file"
               }
