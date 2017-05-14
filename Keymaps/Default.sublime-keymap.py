@@ -8,7 +8,6 @@ def asciidoc_macro(name):
     return "res://Packages/asciispec-sublime/Macros/%s.sublime-macro" % name
 
 
-
 def builtin_macro(name):
     return "res://Packages/Default/%s.sublime-macro" % name
 
