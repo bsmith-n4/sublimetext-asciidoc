@@ -6,15 +6,15 @@
         "caption": "Package Settings",
         "children": [
           {
-            "caption": "asciispec-sublimetext",
+            "caption": "asciispec-sublime",
             "children": [
               {
-                "args": { "file": "${packages}/asciispec-sublimetext/asciispec-sublimetext.sublime-settings" },
+                "args": { "file": "${packages}/asciispec-sublime/asciispec-sublime.sublime-settings" },
                 "caption": "Settings \u2013 Default",
                 "command": "open_file"
               },
               {
-                "args": { "file": "${packages}/User/asciispec-sublimetext.sublime-settings" },
+                "args": { "file": "${packages}/User/asciispec-sublime.sublime-settings" },
                 "caption": "Settings \u2013 User",
                 "command": "open_file"
               }
