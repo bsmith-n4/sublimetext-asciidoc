@@ -1,8 +1,8 @@
 <snippet>
-  <description>Comment Block</description>
+  <description>Requirement Block</description>
   <content><![CDATA[
 
-[req-${1:Project ID}-ver=${2:Version Number}]
+[req,id=${1:Requirement ID},version=${2:Version}]
 --
 ${3:$SELECTION}
 --
