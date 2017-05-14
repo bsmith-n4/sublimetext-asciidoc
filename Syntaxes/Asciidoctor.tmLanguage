@@ -1294,10 +1294,6 @@ Examples:
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>#req_id</string>
-				</dict>
-				<dict>
-					<key>include</key>
 					<string>#section_template</string>
 				</dict>
 				<dict>
@@ -1879,33 +1875,6 @@ Note: Must be dead first among the inlines, so as to take priority.
 )</string>
 			<key>name</key>
 			<string>constant.character.replacement.asciidoc</string>
-		</dict>
-		<key>req_id</key>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>markup.underline.reqid.id.asciidoc</string>
-				</dict>
-				<key>4</key>
-				<dict>
-					<key>name</key>
-					<string>markup.underline.reqversion.asciidoc</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>A requirement id (i.e. anchor).
-
-Examples:
-  [req,id=ROPR1234,version=1]
-  Lorem ipsum dolor.
-</string>
-			<key>match</key>
-			<string>(\[req,id=)(.+?)(version=)([0-9])(\])</string>
-			<key>name</key>
-			<string>meta.tag.reqid.asciidoc</string>
 		</dict>
 		<key>section_template</key>
 		<dict>

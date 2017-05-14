@@ -3,7 +3,7 @@
   <content><![CDATA[
 
 .${1:Image Title (optional)}
-image::{find}${2:/path/to/file}[${3:alt text}, ${4:width}, ${5:height}]
+image::${2:/path/to/file}[${3:alt text}, ${4:width}, ${5:height}]
 
 $0]]></content>
   <tabTrigger>img</tabTrigger>

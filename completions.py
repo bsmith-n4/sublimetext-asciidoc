@@ -27,9 +27,6 @@ ANCHOR_SCOPE = 'markup.underline.blockid.id.asciidoc'
 # Scope of the section titles.
 SEC_TITLE_SCOPE = 'entity.name.section.asciidoc'
 
-# Scope of the requirements titles.
-REQ_ANCHOR_SCOPE = 'markup.underline.reqid.id.asciidoc'
-
 # Name of the plugin's settings file.
 SETTINGS_NAME = 'asciispec-sublime.sublime-settings'
 
@@ -91,9 +88,8 @@ class AsciidocCrossReferenceCompletions(EventListener):
 
         anchors = zip(find_by_scope(view, ANCHOR_SCOPE), repeat('anchor'))
         titles = zip(find_by_scope(view, SEC_TITLE_SCOPE), repeat('title'))
-        reqs = zip(find_by_scope(view, REQ_ANCHOR_SCOPE), repeat('req'))
 
-        return sorted(filter_completions(prefix, anchors, titles, reqs),
+        return sorted(filter_completions(prefix, anchors, titles),
                       key=lambda t: t[0].lower())
 
     def should_trigger(self, view, point):
