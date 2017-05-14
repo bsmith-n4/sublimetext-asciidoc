@@ -1,7 +1,7 @@
-= enfore-sublimetext
+= asciispec-sublimetext
 
 This package is still under development. If you find a bug, please report it on
-https://github.com/bsmith-n4/enfore-sublimetext/issues.
+https://github.com/bsmith-n4/asciispec-sublimetext/issues.
 Any suggestions are welcome!
 
 Happy writing with Asciidoctor!

@@ -1,6 +1,6 @@
 = AsciiDoc Package for SublimeText 3
 
-image:https://travis-ci.org/bsmith-n4/enfore-sublimetext.svg?branch=master["Build Status", link="https://travis-ci.org/bsmith-n4/enfore-sublimetext"]
+image:https://travis-ci.org/bsmith-n4/enfore-sublimetext.svg?branch=master["Build Status", link="https://travis-ci.org/bsmith-n4/asciispec-sublimetext"]
 
 This package provides more complete and up-to-date syntax highlighting, snippets and other goodies for AsciiDoc editing in http://www.sublimetext.com/3[SublimeText 3].
 
@@ -57,8 +57,8 @@ Install this plugin manually from GitHub:
     * OS X: `pass:[~]/Library/Application\ Support/Sublime\ Text\ 3/Packages/`
     * Linux: `pass:[~]/.config/sublime-text-3/Packages/`
     * Windows: `pass:[%APPDATA%\Sublime Text 3\Packages\]`
-2. Clone this repository here into subdirectory enfore-sublimetext:
- git clone https://github.com/bsmith-n4/enfore-sublimetext.git 
+2. Clone this repository here into subdirectory asciispec-sublimetext:
+ git clone https://github.com/bsmith-n4/asciispec-sublimetext.git 
 3. Restart SublimeText.
 
 

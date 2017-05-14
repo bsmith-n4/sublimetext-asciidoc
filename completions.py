@@ -31,7 +31,7 @@ SEC_TITLE_SCOPE = 'entity.name.section.asciidoc'
 REQ_ANCHOR_SCOPE = 'markup.underline.reqid.id.asciidoc'
 
 # Name of the plugin's settings file.
-SETTINGS_NAME = 'enfore-sublimetext.sublime-settings'
+SETTINGS_NAME = 'asciispec-sublimetext.sublime-settings'
 
 # Global list of built-in attributes to display in the completion list.
 builtin_attrs = []
