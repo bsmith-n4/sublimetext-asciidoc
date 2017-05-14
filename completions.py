@@ -28,7 +28,7 @@ ANCHOR_SCOPE = 'markup.underline.blockid.id.asciidoc'
 SEC_TITLE_SCOPE = 'entity.name.section.asciidoc'
 
 # Name of the plugin's settings file.
-SETTINGS_NAME = 'Asciidoctor.sublime-settings'
+SETTINGS_NAME = 'asciispec-sublime.sublime-settings'
 
 # Global list of built-in attributes to display in the completion list.
 builtin_attrs = []
