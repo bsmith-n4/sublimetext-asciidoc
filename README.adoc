@@ -49,8 +49,23 @@ This package provides more complete and up-to-date syntax highlighting, snippets
 * Defines http://docs.sublimetext.info/en/latest/reference/comments.html[comment markers] so you can use http://docs.sublimetext.info/en/latest/reference/comments.html#related-keyboard-shortcuts[default commands] to comment and uncomment lines of text.
 * Provides completions for attributes (built-in and locally defined) and cross references (local anchors and titles).
 
+== Installation with Package Control
 
-== Installation
+Prerequisite: http://wbond.net/sublime_packages/package_control[Package Control]
+
+Installing via Package Control will keep this package up-to-date automatically.
+
+Once Package Control is installed, restart Sublime Text.
+
+1. Open the Command Palette (kbd:[Ctrl + Shift + P]
+   on Windows and Linux. kbd:[⌘ + ⇧ + P] on OS X).
+2. Type "Add" and select "Add Repository".
+3. Paste the repository URL https://github.com/bsmith-n4/asciispec-sublime into the form at the bottom of the window.
+4. Open the Command Palette, type "Install" and select "Package Control: Install Package".
+5. Type "asciispec" and select "asciispec-sublime" from list.
+6. A restart of Sublime Text may be necessary to initialize the plugin.
+
+== Manual Installation
 
 Install this plugin manually from GitHub:
 
@@ -63,7 +78,6 @@ Install this plugin manually from GitHub:
  git clone https://github.com/bsmith-n4/asciispec-sublime.git 
 
 3. Restart SublimeText.
-
 
 == Acknowledgement
 
