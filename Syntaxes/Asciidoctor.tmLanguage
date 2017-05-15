@@ -1884,15 +1884,30 @@ Note: Must be dead first among the inlines, so as to take priority.
 		<dict>
 			<key>captures</key>
 			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.underline.block.id.asciidoc</string>
+				</dict>
 				<key>2</key>
 				<dict>
 					<key>name</key>
 					<string>markup.underline.reqid.id.asciidoc</string>
 				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>markup.underline.block.id.asciidoc</string>
+				</dict>
 				<key>4</key>
 				<dict>
 					<key>name</key>
-					<string>markup.underline.reqversion.asciidoc</string>
+					<string>markup.underline.reqversion.id.asciidoc</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>name</key>
+					<string>markup.underline.block.id.asciidoc</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -1905,7 +1920,7 @@ Examples:
 			<key>match</key>
 			<string>(\[req,id=)(.+?)(,version=)([0-9])(\])</string>
 			<key>name</key>
-			<string>meta.tag.reqid.asciidoc</string>
+			<string>meta.tag.blockid.req.asciidoc</string>
 		</dict>
 		<key>section_template</key>
 		<dict>
