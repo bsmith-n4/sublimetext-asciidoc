@@ -1,0 +1,4 @@
+{
+    "working_dir": "${project_path}",
+    "cmd": ["ruby", "requirements.rb"]
+}
