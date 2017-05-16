@@ -876,11 +876,14 @@ repository:
       Examples:
         [req,id=ROPR1234,version=1]
         Lorem ipsum dolor.
-    name: meta.tag.reqid.asciidoc
+    name: meta.tag.blockid.req.asciidoc
     match: (\[req,id=)(.+?)(,version=)([0-9])(\])
     captures:
+      '1': {name: markup.underline.block.id.asciidoc}
       '2': {name: markup.underline.reqid.id.asciidoc}
-      '4': {name: markup.underline.reqversion.asciidoc}
+      '3': {name: markup.underline.block.id.asciidoc}
+      '4': {name: markup.underline.reqversion.id.asciidoc}
+      '5': {name: markup.underline.block.id.asciidoc}
 
   inline_break:
     comment: |
