@@ -25,7 +25,7 @@ XREF_SCOPE = 'meta.xref.asciidoc'
 ANCHOR_SCOPE = 'markup.underline.blockid.id.asciidoc'
 
 # Scope of the Requirement ID.
-REQ_ID_SCOPE = 'markup.underline.reqid.id.asciidoc'
+REQ_ID_SCOPE = 'variable.parameter.reqid.id.asciidoc'
 
 # Scope of the section titles.
 SEC_TITLE_SCOPE = 'entity.name.section.asciidoc'
