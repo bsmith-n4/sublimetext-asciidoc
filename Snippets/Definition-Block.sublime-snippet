@@ -1,0 +1,14 @@
+<snippet>
+  <description>Definition Block</description>
+  <content><![CDATA[
+
+.${1:Definition Title}
+[def]
+--
+${2:}
+--
+
+$0]]></content>
+  <tabTrigger>def</tabTrigger>
+  <scope>text.asciidoc</scope>
+</snippet>
