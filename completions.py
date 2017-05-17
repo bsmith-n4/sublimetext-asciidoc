@@ -91,9 +91,14 @@ class AsciidocCrossReferenceCompletions(EventListener):
 
         anchors = zip(find_by_scope(view, ANCHOR_SCOPE), repeat('anchor'))
         titles = zip(find_by_scope(view, SEC_TITLE_SCOPE), repeat('title'))
-        reqs = zip(find_by_scope(view, REQ_ID_SCOPE), repeat('reqs'))
+        # Refactor needed...
+        reqs = list(find_by_scope(view, REQ_ID_SCOPE))
+        prefixed_reqs = zip([prefix+elt for elt in reqs for prefix in ('Req-','')], repeat('reqs'))
 
-        return sorted(filter_completions(prefix, anchors, titles, reqs),
+        # log to console
+        print(str([prefix+elt for elt in reqs for prefix in ('Req-','')]))
+
+        return sorted(filter_completions(prefix, anchors, titles, prefixed_reqs),
                       key=lambda t: t[0].lower())
 
     def should_trigger(self, view, point):
