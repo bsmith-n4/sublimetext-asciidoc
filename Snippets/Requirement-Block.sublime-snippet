@@ -2,9 +2,10 @@
   <description>Requirement Block</description>
   <content><![CDATA[
 
-[req,id=${1:Requirement ID},version=${2:Version}]
+.${1:Title (optional)}
+[req,id=${2:ID},version=${3:Version}]
 --
-${3:$SELECTION}
+${4:$SELECTION}
 --
 
 $0]]></content>

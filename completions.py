@@ -3,6 +3,7 @@ import sublime
 from sublime import Region
 from sublime_plugin import EventListener
 
+MAX_VIEWS = 20
 # String that must be found in the syntax setting of the current view
 # to active this plugin.
 SYNTAX = 'Asciidoc'
@@ -83,19 +84,24 @@ class AsciidocCrossReferenceCompletions(EventListener):
 
     def on_query_completions(self, view, prefix, locations):
         """ Called by SublimeText when auto-complete pop-up box appears. """
+        
+        reqs_all = []
+        # Search in all open tabs
+        other_views = [v for v in sublime.active_window().views() if v.id != view.id]
+        views = [view] + other_views
+        # Limit tabs
+        views = views[0:MAX_VIEWS]
+        for i in views:
+            # For each open tab, search by
+            reqs = list(find_by_scope(i, REQ_ID_SCOPE))
+            # Add the Req- prefix
+            reqs_by_view = zip(('Req-' + r for r in reqs), repeat(' requirements'))
+            reqs_all.extend(reqs_by_view)
 
-        if SYNTAX not in view.settings().get('syntax'):
-            return None
-        if not all(self.should_trigger(view, loc) for loc in locations):
-            return None
-
-        anchors = zip(find_by_scope(view, ANCHOR_SCOPE), repeat('anchor'))
-        titles = zip(find_by_scope(view, SEC_TITLE_SCOPE), repeat('title'))
-        # Refactor needed...
-        reqs = list(find_by_scope(view, REQ_ID_SCOPE))
-        prefixed_reqs = zip(('Req-' + r for r in reqs), repeat('reqs'))
-
-        return sorted(filter_completions(prefix, anchors, titles, prefixed_reqs),
+        titles = zip(find_by_scope(view, SEC_TITLE_SCOPE), repeat(' title'))
+        anchors = zip(find_by_scope(view, ANCHOR_SCOPE), repeat(' anchors'))
+        
+        return sorted(filter_completions(prefix, anchors, titles, reqs_all),
                       key=lambda t: t[0].lower())
 
     def should_trigger(self, view, point):
@@ -103,14 +109,13 @@ class AsciidocCrossReferenceCompletions(EventListener):
         return (view.match_selector(point, XREF_SCOPE) or
                 view.match_selector(point, ADOC_SCOPE) and lsubstr(view, point, 2) == '<<')
 
-
 def filter_completions(prefix, *data):
     """ Filter completions that starts with the given prefix and format them
     for the completions list.
 
     Arguments:
         prefix (str):
-        *data: An iterable with tuples of a trigger (content) and a hint (text
+        *data: An iterable with Tuples of a trigger (content) and a hint (text
             showed on the right side of the trigger).
     """
     return (("%s\t%s" % (content, hint), content)
@@ -120,7 +125,6 @@ def filter_completions(prefix, *data):
 def cursors_line_num(view):
     """ Return list of 0-based line numbers of the cursor(s). """
     return [view.rowcol(region.b)[0] for region in view.sel()]
-
 
 def find_by_scope(view, selector):
     """ Find all substrings in the file matching the given scope selector. """
