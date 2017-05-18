@@ -3,11 +3,11 @@ import sublime
 from sublime import Region
 from sublime_plugin import EventListener
 import time
-import datetime 
+import datetime
 
-stamp = 'timestemp = ' +str(datetime.datetime.now())
+stamp = 'timestamp = ' + str(datetime.datetime.now())
 
-
+MAX_VIEWS = 20
 # String that must be found in the syntax setting of the current view
 # to active this plugin.
 SYNTAX = 'Asciidoc'
@@ -101,14 +101,19 @@ class AsciidocCrossReferenceCompletions(EventListener):
 
         for v in views:
             if len(locations) > 0 and v.id == view.id:
-                anchors = zip(find_by_scope(v, ANCHOR_SCOPE), repeat('anchor'))
-                titles = zip(find_by_scope(v, SEC_TITLE_SCOPE), repeat('title'))
-                reqs = zip(find_by_scope(v, REQ_ID_SCOPE), repeat('reqs'))
-        print(stamp)
-        print('view = ' + str(view) + ' v = ' + str(v),' v.id = ' + str(v.id))
-        print('anchor = ' + str(anchors) + ' titles = ' + str(titles),' reqs = ' + str(v.id))
+                anchors = zip(find_by_scope(view, ANCHOR_SCOPE), repeat('anchor'))
+                titles = zip(find_by_scope(view, SEC_TITLE_SCOPE), repeat('title'))
+                # Refactor needed...
+                reqs = list(find_by_scope(view, REQ_ID_SCOPE))
+                prefixed_reqs = zip(('Req-' + r for r in reqs), repeat('reqs'))
 
-        return sorted(filter_completions(prefix, anchors, titles, reqs),key=lambda t: t[0].lower())
+                # Console Logging
+                print(stamp)
+                print('view = ' + str(view) + ' v = ' + str(v), ' v.id = ' + str(v.id))
+                print('titles = ' + str(titles), ' reqs = ' + str(v.id))
+
+        return sorted(filter_completions(prefix, anchors, titles, prefixed_reqs),
+                      key=lambda t: t[0].lower())
 
     def should_trigger(self, view, point):
         """ Return True if completions should be triggered at the given point. """
