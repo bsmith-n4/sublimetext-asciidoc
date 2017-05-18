@@ -1,4 +1,4 @@
 {
-    "working_dir": "${project_path}",
-    "cmd": ["ruby", "requirements.rb"]
+    "working_dir": "${packages}/asciispec-sublime/script",
+    "cmd": ["./test"]
 }
