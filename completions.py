@@ -93,7 +93,7 @@ class AsciidocCrossReferenceCompletions(EventListener):
         titles = zip(find_by_scope(view, SEC_TITLE_SCOPE), repeat('title'))
         # Refactor needed...
         reqs = list(find_by_scope(view, REQ_ID_SCOPE))
-        prefixed_reqs = zip(('Req-'+r for r in reqs), repeat('reqs'))
+        prefixed_reqs = zip(('Req-' + r for r in reqs), repeat('reqs'))
 
         return sorted(filter_completions(prefix, anchors, titles, prefixed_reqs),
                       key=lambda t: t[0].lower())
