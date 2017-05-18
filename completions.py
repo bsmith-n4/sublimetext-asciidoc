@@ -94,11 +94,11 @@ class AsciidocCrossReferenceCompletions(EventListener):
             # For each open tab, search by
             reqs = list(find_by_scope(i, REQ_ID_SCOPE))
             # Add the Req- prefix
-            reqs_by_view = zip(('Req-' + r for r in reqs), repeat(' requirements'))
+            reqs_by_view = zip(('Req-' + r for r in reqs), repeat(' requirement'))
             reqs_all.extend(reqs_by_view)
 
         titles = zip(find_by_scope(view, SEC_TITLE_SCOPE), repeat(' title'))
-        anchors = zip(find_by_scope(view, ANCHOR_SCOPE), repeat(' anchors'))
+        anchors = zip(find_by_scope(view, ANCHOR_SCOPE), repeat(' anchor'))
 
         return sorted(filter_completions(prefix, anchors, titles, reqs_all),
                       key=lambda t: t[0].lower())
