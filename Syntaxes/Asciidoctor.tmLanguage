@@ -740,7 +740,7 @@ Examples:
   Lorem ipsum dolor.
 </string>
 			<key>match</key>
-			<string>(\.)\w.*\n(?!\[(req|def|math))</string>
+			<string>^(\.)\w.*$\n?</string>
 			<key>name</key>
 			<string>markup.heading.block.asciidoc</string>
 		</dict>

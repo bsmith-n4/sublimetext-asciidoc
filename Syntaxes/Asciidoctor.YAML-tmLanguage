@@ -866,7 +866,7 @@ repository:
         .My title
         Lorem ipsum dolor.
     name: markup.heading.block.asciidoc
-    match: (\.)\w.*\n(?!\[(req|def|math))
+    match: ^(\.)\w.*$\n?
 
   block_id:
     comment: |
