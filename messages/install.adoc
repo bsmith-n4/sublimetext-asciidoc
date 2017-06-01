@@ -1,9 +1,9 @@
-= Asciidoctor
+= ChangeLog
 
-This package is still under development. If you find a bug, please report it on
+* 1/6/17 - Highlighting for delmiters, completions for TODO block (td+TAB)
 
-https://github.com/bsmith-n4/asciispec-sublime/issues.
+==========================================================================
 
-Any suggestions are welcome!
+For bugs/issues, please visit
 
-Happy writing with Asciidoctor!
+https://github.com/bsmith-n4/asciispec-sublime/issues

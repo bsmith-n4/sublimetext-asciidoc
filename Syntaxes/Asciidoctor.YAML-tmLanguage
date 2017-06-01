@@ -33,8 +33,6 @@ repository:
     - include: '#block_example'
     - include: '#block_open'
 
-    #- include: '#block_paragraph'
-
   block_comment:
     comment: |
       Examples:
@@ -58,13 +56,14 @@ repository:
     match: |
       (?x)^
       (\[)
-      (sect\d|def|math)
+      (sect\d|def|math|TODO|quote|example|source,?(\w+))
       (\s*\])  
       \s*$\n?
     captures:
-      '1': {name: markup.underline.begin.asciidoc}
-      '3': {name: markup.underline.block.id.asciidoc}
-      '4': {name: markup.underline.end.asciidoc}
+      '1': {name: markup.underline.block.asciidoc}
+      '2': {name: markup.underline.block.asciidoc}
+      '3': {name: variable.parameter.sourcelang.asciidoc}
+      '4': {name: markup.underline.block.asciidoc}
 
   block_example:
     comment: |
@@ -100,10 +99,10 @@ repository:
     contentName: source.block.listing.content.asciidoc
     begin: ^(\-{4,})\s*$\n?
     beginCaptures:
-      '0': {name: constant.delimiter.listing.begin.asciidoc}
+      '0': {name: markup.underline.listing.begin.asciidoc}
     end: ^\1\s*$\n?
     endCaptures:
-      '0': {name: constant.delimiter.listing.end.asciidoc}
+      '0': {name: markup.underline.listing.end.asciidoc}
     patterns:
     - include: '#inline_callout'
 
@@ -154,10 +153,10 @@ repository:
     contentName: meta.block.open.content.asciidoc
     begin: ^\-\-\s*$\n?
     beginCaptures:
-      '0': {name: constant.delimiter.block.open.begin.asciidoc}
+      '0': {name: markup.underline.block.open.begin.asciidoc}
     end: ^\-\-\s*$\n?
     endCaptures:
-      '0': {name: constant.delimiter.block.open.begin.asciidoc}
+      '0': {name: markup.underline.block.open.begin.asciidoc}
     patterns:
     - include: '#lists'
     - include: '#block_comment'
@@ -172,10 +171,10 @@ repository:
     contentName: text.xml.block.passthrough.content.asciidoc
     begin: ^(\+{4,})\s*$\n?
     beginCaptures:
-      '0': {name: constant.delimiter.block.passthrough.begin.asciidoc}
+      '0': {name: markup.underline.block.passthrough.begin.asciidoc}
     end: ^\1\s*$\n?
     endCaptures:
-      '0': {name: constant.delimiter.block.passthrough.end.asciidoc}
+      '0': {name: markup.underline.block.passthrough.end.asciidoc}
     patterns:
     - include: text.xml
 

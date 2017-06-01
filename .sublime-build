@@ -1,4 +1,4 @@
 {
     "working_dir": "${packages}/asciispec-sublime/script",
-    "cmd": ["./test"]
+    "cmd": ["./build"]
 }

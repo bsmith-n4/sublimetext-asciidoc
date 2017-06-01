@@ -27,7 +27,8 @@ This package provides more complete and up-to-date syntax highlighting, snippets
 | Requirement Block  | req kbd:[Tab]        
 | Section Title 1–5  | h1 kbd:[Tab], …, h5 kbd:[Tab] 
 | Sidebar block      | pass:[**] kbd:[Tab]             
-| Table              | \|= kbd:[Tab]          
+| Table              | \|= kbd:[Tab]
+| TODO               | td kbd:[Tab] 
 |===
 
 == Keymaps
