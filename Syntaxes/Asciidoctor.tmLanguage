@@ -335,7 +335,7 @@ Examples:
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>constant.delimiter.listing.begin.asciidoc</string>
+					<string>markup.underline.listing.begin.asciidoc</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -353,7 +353,7 @@ Examples:
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>constant.delimiter.listing.end.asciidoc</string>
+					<string>markup.underline.listing.end.asciidoc</string>
 				</dict>
 			</dict>
 			<key>name</key>
@@ -415,7 +415,7 @@ Examples:
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>constant.delimiter.block.open.begin.asciidoc</string>
+					<string>markup.underline.block.open.begin.asciidoc</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -434,7 +434,7 @@ Note: Might need to check on these includes.
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>constant.delimiter.block.open.begin.asciidoc</string>
+					<string>markup.underline.block.open.begin.asciidoc</string>
 				</dict>
 			</dict>
 			<key>name</key>
@@ -494,7 +494,7 @@ Examples:
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>constant.delimiter.block.passthrough.begin.asciidoc</string>
+					<string>markup.underline.block.passthrough.begin.asciidoc</string>
 				</dict>
 			</dict>
 			<key>contentName</key>
@@ -506,7 +506,7 @@ Examples:
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>constant.delimiter.block.passthrough.end.asciidoc</string>
+					<string>markup.underline.block.passthrough.end.asciidoc</string>
 				</dict>
 			</dict>
 			<key>name</key>
@@ -884,23 +884,28 @@ Examples:
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>markup.underline.begin.asciidoc</string>
+					<string>markup.underline.block.asciidoc</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>markup.underline.block.asciidoc</string>
 				</dict>
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>markup.underline.block.id.asciidoc</string>
+					<string>variable.parameter.sourcelang.asciidoc</string>
 				</dict>
 				<key>4</key>
 				<dict>
 					<key>name</key>
-					<string>markup.underline.end.asciidoc</string>
+					<string>markup.underline.block.asciidoc</string>
 				</dict>
 			</dict>
 			<key>match</key>
 			<string>(?x)^
 (\[)
-(sect\d|def|math)
+(sect\d|def|math|TODO|quote|example|source,?(\w+))
 (\s*\])  
 \s*$\n?
 </string>
