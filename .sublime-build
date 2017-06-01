@@ -1,6 +1,4 @@
 {
-    "working_dir": "${project_path}",
-    "shell": true,
-    "shell_cmd": "./build.sh -h",
+    "working_dir": "${packages}/asciispec-sublime/script",
+    "cmd": ["./test"]
 }
-
