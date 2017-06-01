@@ -731,16 +731,9 @@ Examples:
 		</dict>
 		<key>block_title</key>
 		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.blockheading.asciidoc</string>
-				</dict>
-			</dict>
 			<key>comment</key>
-			<string>Title of a block.
+			<string>Title of a block. Exludes custom block titles for better
+scoping / preventing overlap.
 
 Examples:
   .My title

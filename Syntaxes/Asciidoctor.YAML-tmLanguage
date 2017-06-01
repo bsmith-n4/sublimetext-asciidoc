@@ -859,15 +859,14 @@ repository:
 
   block_title:
     comment: |
-      Title of a block.
+      Title of a block. Exludes custom block titles for better
+      scoping / preventing overlap.
 
       Examples:
         .My title
         Lorem ipsum dolor.
     name: markup.heading.block.asciidoc
     match: ^(\.)\w.*$\n?
-    captures:
-      '1': {name: punctuation.definition.blockheading.asciidoc}
 
   block_id:
     comment: |
