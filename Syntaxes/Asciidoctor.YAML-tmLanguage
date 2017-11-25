@@ -452,12 +452,12 @@ repository:
         Lo**re**m **ipsum dolor**.
         Lo[red]**re**m
     name: markup.bold.double.asciidoc
-    contentName: meta.boldinner.double.asciidoc
-    match: (?&lt;!\\\\)(\[.+?\])?((\*\*)(.+?)(\*\*))
+    match: (?<!\\\\)(\[.+?\])?((\*\*)(.+?)(\*\*))
     captures:
       '1': {name: support.variable.attributelist.asciidoc}
       '2': {name: punctuation.definition.bold.double.begin.asciidoc}
       '3': {name: punctuation.definition.bold.double.end.asciidoc}
+    contentName: meta.boldinner.double.asciidoc
     patterns:
     - include: '#emphasis_double'
     - include: '#monospaced_double'
@@ -477,12 +477,12 @@ repository:
         Lo__re__m __ipsum dolor__.
         Lo[red]__re__m
     name: markup.italic.double.asciidoc
-    contentName: meta.italicinner.double.asciidoc
-    match: (?&lt;!\\\\)(\[(?:[^\]]+?)\])?((__)((?!_).+?)(__))
+    match: (?<!\\\\)(\[(?:[^\]]+?)\])?((__)((?!_).+?)(__))
     captures:
       '1': {name: support.variable.attributelist.asciidoc}
       '2': {name: punctuation.definition.italic.double.begin.asciidoc}
       '3': {name: punctuation.definition.italic.double.end.asciidoc}
+    contentName: meta.italicinner.double.asciidoc
     patterns:
     - include: '#strong_double'
     - include: '#monospaced_double'
@@ -502,12 +502,12 @@ repository:
         Lo``re``m ``ipsum dolor``.
         Lo[red]``re``m
     name: string.other.literal.double.asciidoc
-    contentName: meta.literalinner.double.asciidoc
-    match: (?&lt;!\\)(\[.+?\])?((``)(.+?)(``))
+    match: (?<!\\)(\[.+?\])?((``)(.+?)(``))
     captures:
       '1': {name: support.variable.attributelist.asciidoc}
       '2': {name: punctuation.definition.literal.double.begin.asciidoc}
       '3': {name: punctuation.definition.literal.double.end.asciidoc}
+    contentName: meta.literalinner.double.asciidoc
     patterns:
     - include: '#strong_double'
     - include: '#emphasis_double'
@@ -527,12 +527,12 @@ repository:
         Lo##re##m ##ipsum dolor##.
         Lo[red]##re##m
     name: string.other.unquoted.double.asciidoc
-    contentName: string.unquoted.unquotedinner.double.asciidoc
-    match: ((?&lt;!\\\\)(\[[^\]]+?\])((##)(.+?)(##)))|((?&lt;!\\\\)((##)(.+?)(##)))
+    match: ((?<!\\\\)(\[[^\]]+?\])((##)(.+?)(##)))|((?<!\\\\)((##)(.+?)(##)))
     captures:
       '1': {name: support.variable.attributelist.asciidoc}
       '2': {name: punctuation.definition.string.unquoted.double.begin.asciidoc}
       '3': {name: punctuation.definition.string.unquoted.double.end.asciidoc}
+    contentName: string.unquoted.unquotedinner.double.asciidoc
     patterns:
     - include: '#strong_double'
     - include: '#emphasis_double'
@@ -570,12 +570,12 @@ repository:
         *Lorem ipsum* dolor
         [red]*Lorem ipsum* dolor
     name: markup.bold.single.asciidoc
-    contentName: meta.boldinner.single.asciidoc
-    match: (?&lt;![\\;:\p{Word}\*])(\[.+?\])?((\*)(\S|\S.*?\S)(\*)(?!\p{Word}))
+    match: (?<![\\;:\p{Word}\*])(\[.+?\])?((\*)(\S|\S.*?\S)(\*)(?!\p{Word}))
     captures:
       '1': {name: support.variable.attributelist.asciidoc}
       '2': {name: punctuation.definition.bold.single.begin.asciidoc}
       '3': {name: punctuation.definition.bold.single.end.asciidoc}
+    contentName: meta.boldinner.single.asciidoc
     patterns:
     - include: '#emphasis_double'
     - include: '#monospaced_double'
@@ -595,12 +595,12 @@ repository:
         _Lorem ipsum_ dolor
         [red]_Lorem ipsum_ dolor
     name: markup.italic.single.asciidoc
-    contentName: meta.italicinner.single.asciidoc
-    match: (?!_{4,}\s*$)(?&lt;=^|[^\p{Word};:])(\[(?:[^\]]+?)\])?((_)(\S|\S.*?\S)(_))(?!\p{Word})
+    match: (?!_{4,}\s*$)(?<=^|[^\p{Word};:])(\[(?:[^\]]+?)\])?((_)(\S|\S.*?\S)(_))(?!\p{Word})
     captures:
       '1': {name: support.variable.attributelist.asciidoc}
       '2': {name: punctuation.definition.italic.single.begin.asciidoc}
       '3': {name: punctuation.definition.italic.single.end.asciidoc}
+    contentName: meta.italicinner.single.asciidoc
     patterns:
     - include: '#strong_double'
     - include: '#monospaced_double'
@@ -620,12 +620,12 @@ repository:
         `Lorem ipsum` dolor
         [red]`Lorem ipsum` dolor
     name: string.other.literal.single.asciidoc
-    contentName: meta.literalinner.single.asciidoc
-    match: (?&lt;![\\;:\p{Word}\"'`])(\[.+?\])?((`)(\S|\S.*?\S)(`))(?![\p{Word}\"'`])
+    match: (?<![\\;:\p{Word}\"'`])(\[.+?\])?((`)(\S|\S.*?\S)(`))(?![\p{Word}\"'`])
     captures:
       '1': {name: support.variable.attributelist.asciidoc}
       '2': {name: punctuation.definition.literal.single.begin.asciidoc}
       '3': {name: punctuation.definition.literal.single.end.asciidoc}
+    contentName: meta.literalinner.single.asciidoc
     patterns:
     - include: '#strong_double'
     - include: '#emphasis_double'
@@ -645,12 +645,12 @@ repository:
         #Lorem ipsum# dolor
         [red]#Lorem ipsum# dolor
     name: string.other.unquoted.single.asciidoc
-    contentName: string.unquoted.unquotedinner.single.asciidoc
-    match: ((?&lt;![\\;:\p{Word}#])(\[[^\]]+?\])((#)(\S|\S.*?\S)(#)(?!\p{Word})))|((?&lt;![\\;:\p{Word}#])(\[[^\]]+?\])?((#)(\S|\S.*?\S)(#)(?!\p{Word})))
+    match: ((?<![\\;:\p{Word}#])(\[[^\]]+?\])((#)(\S|\S.*?\S)(#)(?!\p{Word})))|((?<![\\;:\p{Word}#])(\[[^\]]+?\])?((#)(\S|\S.*?\S)(#)(?!\p{Word})))
     captures:
       '1': {name: support.variable.attributelist.asciidoc}
       '2': {name: punctuation.definition.string.unquoted.single.begin.asciidoc}
       '3': {name: punctuation.definition.string.unquoted.single.end.asciidoc}
+    contentName: string.unquoted.unquotedinner.single.asciidoc
     patterns:
     - include: '#strong_double'
     - include: '#emphasis_double'
@@ -670,12 +670,12 @@ repository:
         H~2~O
         H[red]~2~O
     name: string.other.subscript.asciidoc
-    contentName: meta.subscriptinner.asciidoc
-    match: (?&lt;!\\)(\[.+?\])?((~)(\S+?)(~))
+    match: (?<!\\)(\[.+?\])?((~)(\S+?)(~))
     captures:
       '1': {name: support.variable.attributelist.asciidoc}
       '2': {name: punctuation.definition.string.subscript.begin.asciidoc}
       '3': {name: punctuation.definition.string.subscript.end.asciidoc}
+    contentName: meta.subscriptinner.asciidoc
     patterns:
     - include: '#strong_double'
     - include: '#emphasis_double'
@@ -696,12 +696,12 @@ repository:
         E=mc^2^
         E=mc[red]^2^
     name: string.other.superscript.asciidoc
-    contentName: meta.superscriptinner.asciidoc
-    match: (?&lt;!\\)(\[.+?\])?((\^)(\S+?)(\^))
+    match: (?<!\\)(\[.+?\])?((\^)(\S+?)(\^))
     captures:
       '1': {name: support.variable.attributelist.asciidoc}
       '2': {name: punctuation.definition.string.superscript.begin.asciidoc}
       '3': {name: punctuation.definition.string.superscript.end.asciidoc}
+    contentName: meta.superscriptinner.asciidoc
     patterns:
     - include: '#strong_double'
     - include: '#emphasis_double'
