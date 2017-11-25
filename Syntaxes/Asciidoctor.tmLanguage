@@ -983,51 +983,10 @@ Examples:
   _Lorem ipsum_ dolor
   [red]_Lorem ipsum_ dolor
 </string>
-			<key>contentName</key>
-			<string>meta.italicinner.single.asciidoc</string>
 			<key>match</key>
 			<string>(?!_{4,}\s*$)(?&lt;=^|[^\p{Word};:])(\[(?:[^\]]+?)\])?((_)(\S|\S.*?\S)(_))(?!\p{Word})</string>
 			<key>name</key>
 			<string>markup.italic.single.asciidoc</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#strong_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#monospaced_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#mark_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#strong</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#monospaced</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#mark</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#superscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#subscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#characters</string>
-				</dict>
-			</array>
 		</dict>
 		<key>emphasis_double</key>
 		<dict>
@@ -1056,51 +1015,10 @@ Examples:
   Lo__re__m __ipsum dolor__.
   Lo[red]__re__m
 </string>
-			<key>contentName</key>
-			<string>meta.italicinner.double.asciidoc</string>
 			<key>match</key>
 			<string>(?&lt;!\\\\)(\[(?:[^\]]+?)\])?((__)((?!_).+?)(__))</string>
 			<key>name</key>
 			<string>markup.italic.double.asciidoc</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#strong_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#monospaced_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#mark_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#strong</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#monospaced</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#mark</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#superscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#subscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#characters</string>
-				</dict>
-			</array>
 		</dict>
 		<key>entity_name</key>
 		<dict>
@@ -1544,51 +1462,10 @@ Examples:
   #Lorem ipsum# dolor
   [red]#Lorem ipsum# dolor
 </string>
-			<key>contentName</key>
-			<string>string.unquoted.unquotedinner.single.asciidoc</string>
 			<key>match</key>
 			<string>((?&lt;![\\;:\p{Word}#])(\[[^\]]+?\])((#)(\S|\S.*?\S)(#)(?!\p{Word})))|((?&lt;![\\;:\p{Word}#])(\[[^\]]+?\])?((#)(\S|\S.*?\S)(#)(?!\p{Word})))</string>
 			<key>name</key>
 			<string>string.other.unquoted.single.asciidoc</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#strong_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#emphasis_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#monospaced_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#strong</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#emphasis</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#monospaced</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#superscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#subscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#characters</string>
-				</dict>
-			</array>
 		</dict>
 		<key>mark_double</key>
 		<dict>
@@ -1617,51 +1494,10 @@ Examples:
   Lo##re##m ##ipsum dolor##.
   Lo[red]##re##m
 </string>
-			<key>contentName</key>
-			<string>string.unquoted.unquotedinner.double.asciidoc</string>
 			<key>match</key>
 			<string>((?&lt;!\\\\)(\[[^\]]+?\])((##)(.+?)(##)))|((?&lt;!\\\\)((##)(.+?)(##)))</string>
 			<key>name</key>
 			<string>string.other.unquoted.double.asciidoc</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#strong_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#emphasis_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#monospaced_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#strong</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#emphasis</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#monospaced</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#superscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#subscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#characters</string>
-				</dict>
-			</array>
 		</dict>
 		<key>monospaced</key>
 		<dict>
@@ -1690,51 +1526,10 @@ Examples:
   `Lorem ipsum` dolor
   [red]`Lorem ipsum` dolor
 </string>
-			<key>contentName</key>
-			<string>meta.literalinner.single.asciidoc</string>
 			<key>match</key>
 			<string>(?&lt;![\\;:\p{Word}\"'`])(\[.+?\])?((`)(\S|\S.*?\S)(`))(?![\p{Word}\"'`])</string>
 			<key>name</key>
 			<string>string.other.literal.single.asciidoc</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#strong_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#emphasis_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#mark_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#strong</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#emphasis</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#mark</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#superscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#subscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#characters</string>
-				</dict>
-			</array>
 		</dict>
 		<key>monospaced_double</key>
 		<dict>
@@ -1763,51 +1558,10 @@ Examples:
   Lo``re``m ``ipsum dolor``.
   Lo[red]``re``m
 </string>
-			<key>contentName</key>
-			<string>meta.literalinner.double.asciidoc</string>
 			<key>match</key>
 			<string>(?&lt;!\\)(\[.+?\])?((``)(.+?)(``))</string>
 			<key>name</key>
 			<string>string.other.literal.double.asciidoc</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#strong_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#emphasis_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#mark_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#strong</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#emphasis</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#mark</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#superscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#subscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#characters</string>
-				</dict>
-			</array>
 		</dict>
 		<key>olist_item_marker</key>
 		<dict>
@@ -2002,51 +1756,10 @@ Examples:
   *Lorem ipsum* dolor
   [red]*Lorem ipsum* dolor
 </string>
-			<key>contentName</key>
-			<string>meta.boldinner.single.asciidoc</string>
 			<key>match</key>
 			<string>(?&lt;![\\;:\p{Word}\*])(\[.+?\])?((\*)(\S|\S.*?\S)(\*)(?!\p{Word}))</string>
 			<key>name</key>
 			<string>markup.bold.single.asciidoc</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#emphasis_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#monospaced_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#mark_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#emphasis</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#monospaced</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#mark</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#superscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#subscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#characters</string>
-				</dict>
-			</array>
 		</dict>
 		<key>strong_double</key>
 		<dict>
@@ -2075,51 +1788,10 @@ Examples:
   Lo**re**m **ipsum dolor**.
   Lo[red]**re**m
 </string>
-			<key>contentName</key>
-			<string>meta.boldinner.double.asciidoc</string>
 			<key>match</key>
 			<string>(?&lt;!\\\\)(\[.+?\])?((\*\*)(.+?)(\*\*))</string>
 			<key>name</key>
 			<string>markup.bold.double.asciidoc</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#emphasis_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#monospaced_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#mark_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#emphasis</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#monospaced</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#mark</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#superscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#subscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#characters</string>
-				</dict>
-			</array>
 		</dict>
 		<key>subscript</key>
 		<dict>
@@ -2148,55 +1820,10 @@ Examples:
   H~2~O
   H[red]~2~O
 </string>
-			<key>contentName</key>
-			<string>meta.subscriptinner.asciidoc</string>
 			<key>match</key>
 			<string>(?&lt;!\\)(\[.+?\])?((~)(\S+?)(~))</string>
 			<key>name</key>
 			<string>string.other.subscript.asciidoc</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#strong_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#emphasis_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#monospaced_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#mark_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#strong</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#emphasis</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#monospaced</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#mark</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#superscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#characters</string>
-				</dict>
-			</array>
 		</dict>
 		<key>superscript</key>
 		<dict>
@@ -2225,55 +1852,10 @@ Examples:
   E=mc^2^
   E=mc[red]^2^
 </string>
-			<key>contentName</key>
-			<string>meta.superscriptinner.asciidoc</string>
 			<key>match</key>
 			<string>(?&lt;!\\)(\[.+?\])?((\^)(\S+?)(\^))</string>
 			<key>name</key>
 			<string>string.other.superscript.asciidoc</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#strong_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#emphasis_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#monospaced_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#mark_double</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#strong</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#emphasis</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#monospaced</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#mark</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#subscript</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#characters</string>
-				</dict>
-			</array>
 		</dict>
 		<key>title_level_0</key>
 		<dict>

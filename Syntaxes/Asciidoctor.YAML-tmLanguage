@@ -457,17 +457,6 @@ repository:
       '1': {name: support.variable.attributelist.asciidoc}
       '2': {name: punctuation.definition.bold.double.begin.asciidoc}
       '3': {name: punctuation.definition.bold.double.end.asciidoc}
-    contentName: meta.boldinner.double.asciidoc
-    patterns:
-    - include: '#emphasis_double'
-    - include: '#monospaced_double'
-    - include: '#mark_double'
-    - include: '#emphasis'
-    - include: '#monospaced'
-    - include: '#mark'
-    - include: '#superscript'
-    - include: '#subscript'
-    - include: '#characters'
 
   emphasis_double:
     comment: |
@@ -482,17 +471,6 @@ repository:
       '1': {name: support.variable.attributelist.asciidoc}
       '2': {name: punctuation.definition.italic.double.begin.asciidoc}
       '3': {name: punctuation.definition.italic.double.end.asciidoc}
-    contentName: meta.italicinner.double.asciidoc
-    patterns:
-    - include: '#strong_double'
-    - include: '#monospaced_double'
-    - include: '#mark_double'
-    - include: '#strong'
-    - include: '#monospaced'
-    - include: '#mark'
-    - include: '#superscript'
-    - include: '#subscript'
-    - include: '#characters'
 
   monospaced_double:
     comment: |
@@ -507,17 +485,6 @@ repository:
       '1': {name: support.variable.attributelist.asciidoc}
       '2': {name: punctuation.definition.literal.double.begin.asciidoc}
       '3': {name: punctuation.definition.literal.double.end.asciidoc}
-    contentName: meta.literalinner.double.asciidoc
-    patterns:
-    - include: '#strong_double'
-    - include: '#emphasis_double'
-    - include: '#mark_double'
-    - include: '#strong'
-    - include: '#emphasis'
-    - include: '#mark'
-    - include: '#superscript'
-    - include: '#subscript'
-    - include: '#characters'
 
   mark_double:
     comment: |
@@ -532,17 +499,6 @@ repository:
       '1': {name: support.variable.attributelist.asciidoc}
       '2': {name: punctuation.definition.string.unquoted.double.begin.asciidoc}
       '3': {name: punctuation.definition.string.unquoted.double.end.asciidoc}
-    contentName: string.unquoted.unquotedinner.double.asciidoc
-    patterns:
-    - include: '#strong_double'
-    - include: '#emphasis_double'
-    - include: '#monospaced_double'
-    - include: '#strong'
-    - include: '#emphasis'
-    - include: '#monospaced'
-    - include: '#superscript'
-    - include: '#subscript'
-    - include: '#characters'
 
   passthrough:
     comment: |
@@ -575,17 +531,6 @@ repository:
       '1': {name: support.variable.attributelist.asciidoc}
       '2': {name: punctuation.definition.bold.single.begin.asciidoc}
       '3': {name: punctuation.definition.bold.single.end.asciidoc}
-    contentName: meta.boldinner.single.asciidoc
-    patterns:
-    - include: '#emphasis_double'
-    - include: '#monospaced_double'
-    - include: '#mark_double'
-    - include: '#emphasis'
-    - include: '#monospaced'
-    - include: '#mark'
-    - include: '#superscript'
-    - include: '#subscript'
-    - include: '#characters'
 
   emphasis:
     comment: |
@@ -600,17 +545,6 @@ repository:
       '1': {name: support.variable.attributelist.asciidoc}
       '2': {name: punctuation.definition.italic.single.begin.asciidoc}
       '3': {name: punctuation.definition.italic.single.end.asciidoc}
-    contentName: meta.italicinner.single.asciidoc
-    patterns:
-    - include: '#strong_double'
-    - include: '#monospaced_double'
-    - include: '#mark_double'
-    - include: '#strong'
-    - include: '#monospaced'
-    - include: '#mark'
-    - include: '#superscript'
-    - include: '#subscript'
-    - include: '#characters'
 
   monospaced:
     comment: |
@@ -625,17 +559,6 @@ repository:
       '1': {name: support.variable.attributelist.asciidoc}
       '2': {name: punctuation.definition.literal.single.begin.asciidoc}
       '3': {name: punctuation.definition.literal.single.end.asciidoc}
-    contentName: meta.literalinner.single.asciidoc
-    patterns:
-    - include: '#strong_double'
-    - include: '#emphasis_double'
-    - include: '#mark_double'
-    - include: '#strong'
-    - include: '#emphasis'
-    - include: '#mark'
-    - include: '#superscript'
-    - include: '#subscript'
-    - include: '#characters'
 
   mark:
     comment: |
@@ -650,17 +573,6 @@ repository:
       '1': {name: support.variable.attributelist.asciidoc}
       '2': {name: punctuation.definition.string.unquoted.single.begin.asciidoc}
       '3': {name: punctuation.definition.string.unquoted.single.end.asciidoc}
-    contentName: string.unquoted.unquotedinner.single.asciidoc
-    patterns:
-    - include: '#strong_double'
-    - include: '#emphasis_double'
-    - include: '#monospaced_double'
-    - include: '#strong'
-    - include: '#emphasis'
-    - include: '#monospaced'
-    - include: '#superscript'
-    - include: '#subscript'
-    - include: '#characters'
 
   subscript:
     comment: |
@@ -675,18 +587,6 @@ repository:
       '1': {name: support.variable.attributelist.asciidoc}
       '2': {name: punctuation.definition.string.subscript.begin.asciidoc}
       '3': {name: punctuation.definition.string.subscript.end.asciidoc}
-    contentName: meta.subscriptinner.asciidoc
-    patterns:
-    - include: '#strong_double'
-    - include: '#emphasis_double'
-    - include: '#monospaced_double'
-    - include: '#mark_double'
-    - include: '#strong'
-    - include: '#emphasis'
-    - include: '#monospaced'
-    - include: '#mark'
-    - include: '#superscript'
-    - include: '#characters'
 
   superscript:
     comment: |
@@ -701,18 +601,6 @@ repository:
       '1': {name: support.variable.attributelist.asciidoc}
       '2': {name: punctuation.definition.string.superscript.begin.asciidoc}
       '3': {name: punctuation.definition.string.superscript.end.asciidoc}
-    contentName: meta.superscriptinner.asciidoc
-    patterns:
-    - include: '#strong_double'
-    - include: '#emphasis_double'
-    - include: '#monospaced_double'
-    - include: '#mark_double'
-    - include: '#strong'
-    - include: '#emphasis'
-    - include: '#monospaced'
-    - include: '#mark'
-    - include: '#subscript'
-    - include: '#characters'
 
 
 #-----------------------------------------------------------------------------#
