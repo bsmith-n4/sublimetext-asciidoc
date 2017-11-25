@@ -1,5 +1,5 @@
-= AsciiSpec Package for SublimeText 3
-:experimental: true
+= AsciiSpec Package for SublimeText 3
+:experimental: true 
 
 image:https://travis-ci.org/bsmith-n4/asciispec-sublime.svg?branch=master["Build Status", link="https://travis-ci.org/bsmith-n4/asciispec-sublime"]
 
@@ -9,26 +9,26 @@ This package provides more complete and up-to-date syntax highlighting, snippets
 
 [cols="h,a"]
 |===
-| Name               | Trigger
+| Name               | Trigger   
 
-| Button             | btn kbd:[Tab]
+| Button             | btn kbd:[Tab]         
 | Comment Block      | ++//++ kbd:[Tab]
-| Definition Block   | def kbd:[Tab]
-| Document Title     | h0 kbd:[Tab]
-| Example Block      | ++==++ kbd:[Tab]
-| Footnote Reference | fnr kbd:[Tab]
-| Footnote           | fn kbd:[Tab]
-| Image              | img kbd:[Tab]
-| Keyboard Shortcut  | kbd kbd:[Tab]
+| Definition Block   | def kbd:[Tab]    
+| Document Title     | h0 kbd:[Tab]          
+| Example Block      | ++==++ kbd:[Tab]          
+| Footnote Reference | fnr kbd:[Tab]         
+| Footnote           | fn kbd:[Tab]          
+| Image              | img kbd:[Tab]         
+| Keyboard Shortcut  | kbd kbd:[Tab]         
 | Listing Block      | -- kbd:[Tab]
-| Math Block         | math kbd:[Tab]
-| Passthrough Block  | pass:[++] kbd:[Tab]
-| Quote Block        | pass:[__] kbd:[Tab]
-| Requirement Block  | req kbd:[Tab]
-| Section Title 1–5  | h1 kbd:[Tab], …, h5 kbd:[Tab]
-| Sidebar block      | pass:[**] kbd:[Tab]
+| Math Block         | math kbd:[Tab]          
+| Passthrough Block  | pass:[++] kbd:[Tab]            
+| Quote Block        | pass:[__] kbd:[Tab]  
+| Requirement Block  | req kbd:[Tab]        
+| Section Title 1–5  | h1 kbd:[Tab], …, h5 kbd:[Tab] 
+| Sidebar block      | pass:[**] kbd:[Tab]             
 | Table              | \|= kbd:[Tab]
-| TODO               | td kbd:[Tab]
+| TODO               | td kbd:[Tab] 
 |===
 
 == Keymaps
@@ -39,14 +39,14 @@ This package provides more complete and up-to-date syntax highlighting, snippets
 * At the end of a (un)ordered list item, pressing kbd:[Enter] will automatically insert the new list item “bullet.”
     - Pressing kbd:[Enter] on the blank list item will remove it.
     - Pressing kbd:[Tab] on the blank list item, or selected item(s), will increase nesting level and indent it.
-    - Pressing kbd:[Shift] kbd:[Tab] on the blank list item, or selected item(s), will decrease nesting level and unindent it.
+    - Pressing kbd:[Shift] kbd:[Tab] on the blank list item, or selected item(s), will decrease nesting level and unindent it.
     - You can disable indentation of list items in your settings file.
 * At the end of a callouts list item, pressing kbd:[Enter] will automatically insert the new list item with incremented number.
     - Pressing kbd:[Enter] on the blank list item will remove it.
 
 == Others
 
-* Displays document and section titles in the local symbol list (kbd:[Ctrl] kbd:[R] / kbd:[Cmd] kbd:[R]) and the global symbol list (kbd:[Ctrl] kbd:[Shift] kbd:[R] / kbd:[Cmd] kbd:[Shift] kbd:[R]).
+* Displays document and section titles in the local symbol list (kbd:[Ctrl] kbd:[R] / kbd:[Cmd] kbd:[R]) and the global symbol list (kbd:[Ctrl] kbd:[Shift] kbd:[R] / kbd:[Cmd] kbd:[Shift] kbd:[R]).
     - In the local symbol list, titles are nicely indented.
     - In the global symbol list, titles will start with `=`, so you will know they belong to AsciiDoc files at a glance. Also they will be on top of the list because of the presedence of `=`.
 * Defines http://docs.sublimetext.info/en/latest/reference/comments.html[comment markers] so you can use http://docs.sublimetext.info/en/latest/reference/comments.html#related-keyboard-shortcuts[default commands] to comment and uncomment lines of text.
@@ -73,12 +73,12 @@ Once Package Control is installed, restart Sublime Text.
 Install this plugin manually from GitHub:
 
 1. Go to your Packages subdirectory under the ST3’s data directory:
-    * OS X: `pass:[~]/Library/Application\ Support/Sublime\ Text\ 3/Packages/`
+    * OS X: `pass:[~]/Library/Application\ Support/Sublime\ Text\ 3/Packages/`
     * Linux: `pass:[~]/.config/sublime-text-3/Packages/`
     * Windows: `pass:[%APPDATA%]\Sublime Text 3\Packages\`
 2. Clone this repository here into subdirectory asciispec-sublimetext:
 
- git clone https://github.com/bsmith-n4/asciispec-sublime.git
+ git clone https://github.com/bsmith-n4/asciispec-sublime.git 
 
 3. Restart SublimeText.
 
