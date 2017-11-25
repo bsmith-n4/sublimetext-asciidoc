@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<!--
- |	This file is auto-generated from Asciidoctor.YAML-tmLanguage, do not edit it by hand!
--->
 <dict>
 	<key>fileTypes</key>
 	<array>
@@ -961,8 +958,6 @@ double colon followed by a space inside a label, i.e. it matches the
 		</dict>
 		<key>emphasis</key>
 		<dict>
-			<key>match</key>
-			<string>(?!_{4,}\s*$)(?&lt;=^|[^\p{Word};:])(\[(?:[^\]]+?)\])?((_)(\S|\S.*?\S)(_))(?!\p{Word})</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -990,6 +985,8 @@ Examples:
 </string>
 			<key>contentName</key>
 			<string>meta.italicinner.single.asciidoc</string>
+			<key>match</key>
+			<string>(?!_{4,}\s*$)(?&amp;lt;=^|[^\p{Word};:])(\[(?:[^\]]+?)\])?((_)(\S|\S.*?\S)(_))(?!\p{Word})</string>
 			<key>name</key>
 			<string>markup.italic.single.asciidoc</string>
 			<key>patterns</key>
@@ -1034,8 +1031,6 @@ Examples:
 		</dict>
 		<key>emphasis_double</key>
 		<dict>
-			<key>match</key>
-			<string>(?&lt;!\\\\)(\[(?:[^\]]+?)\])?((__)((?!_).+?)(__))</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1063,6 +1058,8 @@ Examples:
 </string>
 			<key>contentName</key>
 			<string>meta.italicinner.double.asciidoc</string>
+			<key>match</key>
+			<string>(?&amp;lt;!\\\\)(\[(?:[^\]]+?)\])?((__)((?!_).+?)(__))</string>
 			<key>name</key>
 			<string>markup.italic.double.asciidoc</string>
 			<key>patterns</key>
@@ -1522,8 +1519,6 @@ Examples:
 		</dict>
 		<key>mark</key>
 		<dict>
-			<key>match</key>
-			<string>((?&lt;![\\;:\p{Word}#])(\[[^\]]+?\])((#)(\S|\S.*?\S)(#)(?!\p{Word})))|((?&lt;![\\;:\p{Word}#])(\[[^\]]+?\])?((#)(\S|\S.*?\S)(#)(?!\p{Word})))</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1551,6 +1546,8 @@ Examples:
 </string>
 			<key>contentName</key>
 			<string>string.unquoted.unquotedinner.single.asciidoc</string>
+			<key>match</key>
+			<string>((?&amp;lt;![\\;:\p{Word}#])(\[[^\]]+?\])((#)(\S|\S.*?\S)(#)(?!\p{Word})))|((?&amp;lt;![\\;:\p{Word}#])(\[[^\]]+?\])?((#)(\S|\S.*?\S)(#)(?!\p{Word})))</string>
 			<key>name</key>
 			<string>string.other.unquoted.single.asciidoc</string>
 			<key>patterns</key>
@@ -1595,8 +1592,6 @@ Examples:
 		</dict>
 		<key>mark_double</key>
 		<dict>
-			<key>match</key>
-			<string>((?&lt;!\\\\)(\[[^\]]+?\])((##)(.+?)(##)))|((?&lt;!\\\\)((##)(.+?)(##)))</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1624,6 +1619,8 @@ Examples:
 </string>
 			<key>contentName</key>
 			<string>string.unquoted.unquotedinner.double.asciidoc</string>
+			<key>match</key>
+			<string>((?&amp;lt;!\\\\)(\[[^\]]+?\])((##)(.+?)(##)))|((?&amp;lt;!\\\\)((##)(.+?)(##)))</string>
 			<key>name</key>
 			<string>string.other.unquoted.double.asciidoc</string>
 			<key>patterns</key>
@@ -1668,8 +1665,6 @@ Examples:
 		</dict>
 		<key>monospaced</key>
 		<dict>
-			<key>match</key>
-			<string>(?&lt;![\\;:\p{Word}\"'`])(\[.+?\])?((`)(\S|\S.*?\S)(`))(?![\p{Word}\"'`])</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1697,6 +1692,8 @@ Examples:
 </string>
 			<key>contentName</key>
 			<string>meta.literalinner.single.asciidoc</string>
+			<key>match</key>
+			<string>(?&amp;lt;![\\;:\p{Word}\"'`])(\[.+?\])?((`)(\S|\S.*?\S)(`))(?![\p{Word}\"'`])</string>
 			<key>name</key>
 			<string>string.other.literal.single.asciidoc</string>
 			<key>patterns</key>
@@ -1741,8 +1738,6 @@ Examples:
 		</dict>
 		<key>monospaced_double</key>
 		<dict>
-			<key>match</key>
-			<string>(?&lt;!\\)(\[.+?\])?((``)(.+?)(``))</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1770,6 +1765,8 @@ Examples:
 </string>
 			<key>contentName</key>
 			<string>meta.literalinner.double.asciidoc</string>
+			<key>match</key>
+			<string>(?&amp;lt;!\\)(\[.+?\])?((``)(.+?)(``))</string>
 			<key>name</key>
 			<string>string.other.literal.double.asciidoc</string>
 			<key>patterns</key>
@@ -1980,8 +1977,6 @@ sect\d|abstract|preface|colophon|dedication|glossary|bibliography|synopsis|appen
 		</dict>
 		<key>strong</key>
 		<dict>
-			<key>match</key>
-			<string>(?&lt;![\\;:\p{Word}\*])(\[.+?\])?((\*)(\S|\S.*?\S)(\*)(?!\p{Word}))</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -2009,6 +2004,8 @@ Examples:
 </string>
 			<key>contentName</key>
 			<string>meta.boldinner.single.asciidoc</string>
+			<key>match</key>
+			<string>(?&amp;lt;![\\;:\p{Word}\*])(\[.+?\])?((\*)(\S|\S.*?\S)(\*)(?!\p{Word}))</string>
 			<key>name</key>
 			<string>markup.bold.single.asciidoc</string>
 			<key>patterns</key>
@@ -2053,8 +2050,6 @@ Examples:
 		</dict>
 		<key>strong_double</key>
 		<dict>
-			<key>match</key>
-			<string>(?&lt;!\\\\)(\[.+?\])?((\*\*)(.+?)(\*\*))</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -2082,6 +2077,8 @@ Examples:
 </string>
 			<key>contentName</key>
 			<string>meta.boldinner.double.asciidoc</string>
+			<key>match</key>
+			<string>(?&amp;lt;!\\\\)(\[.+?\])?((\*\*)(.+?)(\*\*))</string>
 			<key>name</key>
 			<string>markup.bold.double.asciidoc</string>
 			<key>patterns</key>
@@ -2126,8 +2123,6 @@ Examples:
 		</dict>
 		<key>subscript</key>
 		<dict>
-			<key>match</key>
-			<string>(?&lt;!\\)(\[.+?\])?((~)(\S+?)(~))</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -2155,6 +2150,8 @@ Examples:
 </string>
 			<key>contentName</key>
 			<string>meta.subscriptinner.asciidoc</string>
+			<key>match</key>
+			<string>(?&amp;lt;!\\)(\[.+?\])?((~)(\S+?)(~))</string>
 			<key>name</key>
 			<string>string.other.subscript.asciidoc</string>
 			<key>patterns</key>
@@ -2203,8 +2200,6 @@ Examples:
 		</dict>
 		<key>superscript</key>
 		<dict>
-			<key>begin</key>
-			<string>(?&lt;!\\)(\[.+?\])?((\^)(\S+?)(\^))</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -2232,6 +2227,8 @@ Examples:
 </string>
 			<key>contentName</key>
 			<string>meta.superscriptinner.asciidoc</string>
+			<key>match</key>
+			<string>(?&amp;lt;!\\)(\[.+?\])?((\^)(\S+?)(\^))</string>
 			<key>name</key>
 			<string>string.other.superscript.asciidoc</string>
 			<key>patterns</key>
