@@ -3,12 +3,12 @@
   <content><![CDATA[
 
 .${1:Table Caption}
-[cols="$2",opts="${3:autowidth}"]
+[cols="$2"]
 |===
-| $4
+| $3
 |===
 
-]]></content>
+$0]]></content>
   <tabTrigger>|=</tabTrigger>
   <scope>text.asciidoc</scope>
 </snippet>
