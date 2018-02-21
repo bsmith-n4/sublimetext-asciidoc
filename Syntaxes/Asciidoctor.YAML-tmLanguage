@@ -35,6 +35,7 @@ repository:
     - include: '#block_open'
     - include: '#colconfig'
     - include: '#role'
+    - include: '#inline_math'
 
   block_comment:
     comment: |
@@ -117,6 +118,7 @@ repository:
     - include: '#inline'
     - include: '#characters'
     - include: '#table_pipe'
+    - include: '#inline_math'
 
   block_example:
     comment: |
@@ -298,6 +300,20 @@ repository:
     captures:
       '1': {name: punctuation.definition.callout.begin.asciidoc}
       '2': {name: punctuation.definition.callout.end.asciidoc}
+
+  inline_math:
+    comment: |
+      Callout label
+
+      Examples:
+        <1>
+        <42>
+    name: constant.other.callout.asciidoc
+    match: (\$)(.+?)(\$)
+    captures:
+      '1': {name: punctuation.definition.math.begin.asciidoc}
+      '2': {name: markup.underline.block.asciidoc}
+      '3': {name: punctuation.definition.math.end.asciidoc}
 
 
 #-----------------------------------------------------------------------------#

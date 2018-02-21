@@ -800,6 +800,10 @@ Examples:
 					<key>include</key>
 					<string>#role</string>
 				</dict>
+				<dict>
+					<key>include</key>
+					<string>#inline_math</string>
+				</dict>
 			</array>
 		</dict>
 		<key>characters</key>
@@ -1379,6 +1383,38 @@ Examples:
 			<string>^(//)([^/\n].*|)$\n?</string>
 			<key>name</key>
 			<string>comment.line.double-slash.asciidoc</string>
+		</dict>
+		<key>inline_math</key>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.math.begin.asciidoc</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>markup.underline.block.asciidoc</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.math.end.asciidoc</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Callout label
+
+Examples:
+  &lt;1&gt;
+  &lt;42&gt;
+</string>
+			<key>match</key>
+			<string>(\$)(.+?)(\$)</string>
+			<key>name</key>
+			<string>constant.other.callout.asciidoc</string>
 		</dict>
 		<key>lines</key>
 		<dict>
@@ -2499,6 +2535,10 @@ Examples:
 				<dict>
 					<key>include</key>
 					<string>#table_pipe</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#inline_math</string>
 				</dict>
 			</array>
 		</dict>
